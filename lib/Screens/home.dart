@@ -79,22 +79,66 @@ class Home extends StatelessWidget {
                   color: Color.fromARGB(255, 47, 125, 121),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Column(children: [
-                  Row(
-                    children: [
-                      Text(
-                        'Tổng Số Dư',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 10),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Tổng Số Dư',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Icon(
+                            Icons.more_horiz,
+                            color: Colors.white,
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ]),
+                    ),
+                    SizedBox(height: 7),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: Row(
+                        children: [
+                          Text(
+                            '\$ 3,50',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 25),
+                    Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 13,
+                              backgroundColor:
+                                  Color.fromARGB(255, 85, 145, 141),
+                              child: Icon(
+                                Icons.arrow_downward,
+                                color: Colors.white,
+                                size: 19,
+                              ),
+                            )
+                          ],
+                        ))
+                  ],
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),
