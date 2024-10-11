@@ -120,21 +120,59 @@ class Home extends StatelessWidget {
                     ),
                     SizedBox(height: 25),
                     Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 15),
-                        child: Row(
-                          children: [
-                            CircleAvatar(
-                              radius: 13,
-                              backgroundColor:
-                                  Color.fromARGB(255, 85, 145, 141),
-                              child: Icon(
-                                Icons.arrow_downward,
-                                color: Colors.white,
-                                size: 19,
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 13,
+                                backgroundColor:
+                                    Color.fromARGB(255, 85, 145, 141),
+                                child: Icon(
+                                  Icons.arrow_downward,
+                                  color: Colors.white,
+                                  size: 19,
+                                ),
                               ),
-                            )
-                          ],
-                        ))
+                              SizedBox(width: 7),
+                              Text(
+                                'Thu Nhập',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 216, 216, 216),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 13,
+                                backgroundColor:
+                                    Color.fromARGB(255, 85, 145, 141),
+                                child: Icon(
+                                  Icons.arrow_upward,
+                                  color: Colors.white,
+                                  size: 19,
+                                ),
+                              ),
+                              SizedBox(width: 7),
+                              Text(
+                                'Chi phí',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 216, 216, 216),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
