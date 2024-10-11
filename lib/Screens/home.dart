@@ -76,6 +76,14 @@ class Home extends StatelessWidget {
                 height: 170,
                 width: 320,
                 decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromRGBO(47, 125, 121, 0.3),
+                      offset: Offset(0, 6),
+                      blurRadius: 12,
+                      spreadRadius: 6,
+                    ),
+                  ],
                   color: Color.fromARGB(255, 47, 125, 121),
                   borderRadius: BorderRadius.circular(15),
                 ),
@@ -169,6 +177,31 @@ class Home extends StatelessWidget {
                                 ),
                               ),
                             ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 6),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            '\$ 1,450',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 17,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            '\$ 1,450',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 17,
+                              color: Colors.white,
+                            ),
                           ),
                         ],
                       ),
