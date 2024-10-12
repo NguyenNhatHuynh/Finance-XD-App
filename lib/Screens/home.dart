@@ -38,6 +38,16 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
+            SliverList(delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(5),
+                    child: Image.asset('Images/Tran.png'),
+                  ),
+                );
+              },
+            ))
           ],
         ),
       ),
