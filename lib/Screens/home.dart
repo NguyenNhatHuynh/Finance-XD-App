@@ -38,16 +38,39 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-            SliverList(delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                return ListTile(
-                  leading: ClipRRect(
-                    borderRadius: BorderRadius.circular(5),
-                    child: Image.asset('Images/Tran.png'),
-                  ),
-                );
-              },
-            ))
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  return ListTile(
+                    leading: ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image.asset('assets/images/Tran.png', height: 40),
+                    ),
+                    title: Text(
+                      'Chuyển khoản',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 17,
+                      ),
+                    ),
+                    subtitle: Text(
+                      'Hôm nay',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    trailing: Text(
+                      '\$ 70',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 19,
+                        color: Colors.green,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            )
           ],
         ),
       ),
