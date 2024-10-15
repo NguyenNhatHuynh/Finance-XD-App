@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:name_your_price/data/listdata.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -44,31 +45,33 @@ class Home extends StatelessWidget {
                   return ListTile(
                     leading: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
-                      child: Image.asset('assets/images/Tran.png', height: 40),
+                      child: Image.asset('assets/${geter()[index].image!}',
+                          height: 40),
                     ),
                     title: Text(
-                      'Chuyển khoản',
+                      geter()[index].name!,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 17,
                       ),
                     ),
                     subtitle: Text(
-                      'Hôm nay',
+                      geter()[index].time!,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     trailing: Text(
-                      '\$ 70',
+                      geter()[index].free!,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 19,
-                        color: Colors.green,
+                        color: geter()[index].buy! ? Colors.red : Colors.green,
                       ),
                     ),
                   );
                 },
+                childCount: geter().length,
               ),
             )
           ],
