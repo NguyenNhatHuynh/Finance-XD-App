@@ -26,6 +26,33 @@ class _StatisticsState extends State<Statistics> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      ...List.generate(
+                        4,
+                        (index) {
+                          return Container(
+                            height: 40,
+                            width: 80,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 47, 125, 121),
+                            ),
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Ngày',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          );
+                        },
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
