@@ -8,6 +8,8 @@ class Statistics extends StatefulWidget {
 }
 
 class _StatisticsState extends State<Statistics> {
+  List day = ['Ngày', 'Tuần', 'Tháng', 'Năm'];
+  int index_color = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,31 +29,46 @@ class _StatisticsState extends State<Statistics> {
                     ),
                   ),
                   SizedBox(height: 20),
-                  Row(
-                    children: [
-                      ...List.generate(
-                        4,
-                        (index) {
-                          return Container(
-                            height: 40,
-                            width: 80,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color.fromARGB(255, 47, 125, 121),
-                            ),
-                            alignment: Alignment.center,
-                            child: Text(
-                              'Ngày',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ...List.generate(
+                          4,
+                          (index) {
+                            return GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  index_color = index;
+                                });
+                              },
+                              child: Container(
+                                height: 40,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: index_color == index
+                                      ? Color.fromARGB(255, 47, 125, 121)
+                                      : Colors.white,
+                                ),
+                                alignment: Alignment.center,
+                                child: Text(
+                                  day[index],
+                                  style: TextStyle(
+                                    color: index_color == index
+                                        ? Colors.white
+                                        : Colors.black,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
                               ),
-                            ),
-                          );
-                        },
-                      )
-                    ],
+                            );
+                          },
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
