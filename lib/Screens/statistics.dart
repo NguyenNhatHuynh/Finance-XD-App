@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:name_your_price/widgets/chart.dart';
 
 class Statistics extends StatefulWidget {
   const Statistics({Key? key}) : super(key: key);
@@ -102,6 +105,24 @@ class _StatisticsState extends State<Statistics> {
                               width: 2,
                             ),
                             borderRadius: BorderRadius.circular(8),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Chart(),
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Chi tiêu hàng đầu',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
                           ),
                         )
                       ],
