@@ -114,17 +114,22 @@ class _StatisticsState extends State<Statistics> {
                   Chart(),
                   SizedBox(height: 20),
                   Padding(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Chi tiêu hàng đầu',
                           style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Icon(
+                          Icons.swap_vert,
+                          size: 25,
+                          color: Colors.grey,
+                        ),
                       ],
                     ),
                   )
