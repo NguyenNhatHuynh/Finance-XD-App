@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:name_your_price/Screens/statistics.dart';
+import 'package:name_your_price/Screens/home.dart';
 
 class Bottom extends StatefulWidget {
   const Bottom({Key? key}) : super(key: key);
@@ -9,9 +11,11 @@ class Bottom extends StatefulWidget {
 
 class _BottomState extends State<Bottom> {
   int index_color = 0;
+  List Screen = [Home(), Statistics(), Home(), Statistics()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Screen[index_color],
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.add),
