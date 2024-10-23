@@ -1,6 +1,7 @@
 // import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:name_your_price/data/top.dart';
 import 'package:name_your_price/widgets/chart.dart';
 
 class Statistics extends StatefulWidget {
@@ -140,9 +141,34 @@ class _StatisticsState extends State<Statistics> {
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   return ListTile(
-                    leading: Image.asset('images/${}'),
+                    leading: Image.asset(
+                      'images/${geter_top()[index].image!}',
+                      height: 40,
                     ),
-                    },
+                    title: Text(
+                      geter_top()[index].name!,
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    subtitle: Text(
+                      geter_top()[index].time!,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    trailing: Text(
+                      geter_top()[index].free!,
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 19,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  );
+                },
+                childCount: geter_top().length,
               ),
             )
           ],
