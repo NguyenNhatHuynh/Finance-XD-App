@@ -136,6 +136,15 @@ class _StatisticsState extends State<Statistics> {
                 ],
               ),
             ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  return ListTile(
+                    leading: Image.asset('images/${}'),
+                    ),
+                    },
+              ),
+            )
           ],
         ),
       ),
