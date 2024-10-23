@@ -8,6 +8,7 @@ class Bottom extends StatefulWidget {
 }
 
 class _BottomState extends State<Bottom> {
+  int index_color = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,36 +25,52 @@ class _BottomState extends State<Bottom> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                    index_color = 0;
+                  });
+                },
                 child: Icon(
                   Icons.home,
                   size: 30,
-                  color: Color(0xff368983),
+                  color: index_color == 0 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
               SizedBox(width: 20),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                    index_color = 1;
+                  });
+                },
                 child: Icon(
                   Icons.bar_chart_outlined,
                   size: 30,
-                  color: Color(0xff368983),
+                  color: index_color == 1 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                    index_color = 2;
+                  });
+                },
                 child: Icon(
                   Icons.account_balance_wallet_outlined,
                   size: 30,
-                  color: Color(0xff368983),
+                  color: index_color == 2 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                    index_color = 3;
+                  });
+                },
                 child: Icon(
                   Icons.person_outline,
                   size: 30,
-                  color: Color(0xff368983),
+                  color: index_color == 3 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
             ],
