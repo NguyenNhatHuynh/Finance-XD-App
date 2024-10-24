@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:name_your_price/data/model/add_date.dart';
+import 'package:finance_appXD/data/model/add_date.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class Add_Screen extends StatefulWidget {
