@@ -1,5 +1,5 @@
 import 'package:hive/hive.dart';
-import 'package:name_your_price/model/add_date.dart';
+import 'package:finance_appXD/data/model/add_date.dart';
 
 int totals = 0;
 
