@@ -1,80 +1,116 @@
 import 'package:flutter/material.dart';
-import 'package:name_your_price/data/listdata.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:finance_appXD/data/listdata.dart';
+import 'package:finance_appXD/data/model/add_date.dart';
+import 'package:finance_appXD/data/utlity.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  var history;
+  final box = Hive.box<Add_data>('data');
+  final List<String> day = [
+    'Monday',
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    'friday',
+    'saturday',
+    'sunday'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: SizedBox(height: 340, child: _head()),
-            ),
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Lịch sử giao dịch',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 19,
-                        color: Colors.black,
+          child: ValueListenableBuilder(
+              valueListenable: box.listenable(),
+              builder: (context, value, child) {
+                return CustomScrollView(
+                  slivers: [
+                    SliverToBoxAdapter(
+                      child: SizedBox(height: 340, child: _head()),
+                    ),
+                    SliverToBoxAdapter(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Transactions History',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 19,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text(
+                              'See all',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    Text(
-                      'Xem tất cả',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15,
-                        color: Colors.grey,
+                    SliverList(
+                      delegate: SliverChildBuilderDelegate(
+                        (context, index) {
+                          history = box.values.toList()[index];
+                          return getList(history, index);
+                        },
+                        childCount: box.length,
                       ),
-                    ),
+                    )
                   ],
-                ),
-              ),
-            ),
-            SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                  return ListTile(
-                    leading: ClipRRect(
-                      borderRadius: BorderRadius.circular(5),
-                      child: Image.asset('assets/${geter()[index].image!}',
-                          height: 40),
-                    ),
-                    title: Text(
-                      geter()[index].name!,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 17,
-                      ),
-                    ),
-                    subtitle: Text(
-                      geter()[index].time!,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    trailing: Text(
-                      geter()[index].free!,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 19,
-                        color: geter()[index].buy! ? Colors.red : Colors.green,
-                      ),
-                    ),
-                  );
-                },
-                childCount: geter().length,
-              ),
-            )
-          ],
+                );
+              })),
+    );
+  }
+
+  Widget getList(Add_data history, int index) {
+    return Dismissible(
+        key: UniqueKey(),
+        onDismissed: (direction) {
+          history.delete();
+        },
+        child: get(index, history));
+  }
+
+  ListTile get(int index, Add_data history) {
+    return ListTile(
+      leading: ClipRRect(
+        borderRadius: BorderRadius.circular(5),
+        child: Image.asset('images/${history.name}.png', height: 40),
+      ),
+      title: Text(
+        history.name,
+        style: TextStyle(
+          fontSize: 17,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+      subtitle: Text(
+        '${day[history.datetime.weekday - 1]}  ${history.datetime.year}-${history.datetime.day}-${history.datetime.month}',
+        style: TextStyle(
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+      trailing: Text(
+        history.amount,
+        style: TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 19,
+          color: history.IN == 'Income' ? Colors.green : Colors.red,
         ),
       ),
     );
@@ -98,7 +134,7 @@ class Home extends StatelessWidget {
               child: Stack(
                 children: [
                   Positioned(
-                    top: 5,
+                    top: 35,
                     left: 340,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(7),
@@ -120,7 +156,7 @@ class Home extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Chào buổi chiều',
+                          'Good afternoon',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 16,
@@ -128,10 +164,10 @@ class Home extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'Xoan Dev',
+                          'Enjelin Morgeana',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
-                            fontSize: 16,
+                            fontSize: 20,
                             color: Colors.white,
                           ),
                         ),
@@ -170,7 +206,7 @@ class Home extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Tổng Số Dư',
+                        'Total Balance',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
@@ -190,13 +226,13 @@ class Home extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        '\$ 3,50',
+                        '\$ ${total()}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
                           color: Colors.white,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -219,7 +255,7 @@ class Home extends StatelessWidget {
                           ),
                           SizedBox(width: 7),
                           Text(
-                            'Thu Nhập',
+                            'Income',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 16,
@@ -241,7 +277,7 @@ class Home extends StatelessWidget {
                           ),
                           SizedBox(width: 7),
                           Text(
-                            'Chi phí',
+                            'Expenses',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 16,
@@ -260,7 +296,7 @@ class Home extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '\$ 1,450',
+                        '\$ ${income()}',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
@@ -268,7 +304,7 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\$ 1,450',
+                        '\$ ${expenses()}',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
@@ -277,11 +313,11 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
+                )
               ],
             ),
           ),
-        ),
+        )
       ],
     );
   }
