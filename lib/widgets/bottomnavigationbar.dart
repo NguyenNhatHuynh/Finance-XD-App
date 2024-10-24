@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:name_your_price/Screens/statistics.dart';
-import 'package:name_your_price/Screens/home.dart';
+import 'package:finance_appXD/Screens/add.dart';
+import 'package:finance_appXD/Screens/home.dart';
+import 'package:finance_appXD/Screens/statistics.dart';
 
 class Bottom extends StatefulWidget {
   const Bottom({Key? key}) : super(key: key);
@@ -17,8 +18,12 @@ class _BottomState extends State<Bottom> {
     return Scaffold(
       body: Screen[index_color],
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => Add_Screen()));
+        },
         child: Icon(Icons.add),
+        backgroundColor: Color(0xff368983),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
@@ -40,7 +45,6 @@ class _BottomState extends State<Bottom> {
                   color: index_color == 0 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
-              SizedBox(width: 20),
               GestureDetector(
                 onTap: () {
                   setState(() {
@@ -53,6 +57,7 @@ class _BottomState extends State<Bottom> {
                   color: index_color == 1 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
+              SizedBox(width: 10),
               GestureDetector(
                 onTap: () {
                   setState(() {
@@ -72,7 +77,7 @@ class _BottomState extends State<Bottom> {
                   });
                 },
                 child: Icon(
-                  Icons.person_outline,
+                  Icons.person_outlined,
                   size: 30,
                   color: index_color == 3 ? Color(0xff368983) : Colors.grey,
                 ),
