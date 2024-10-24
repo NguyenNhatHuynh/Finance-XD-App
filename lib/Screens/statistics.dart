@@ -11,8 +11,12 @@ class Statistics extends StatefulWidget {
   State<Statistics> createState() => _StatisticsState();
 }
 
+ValueNotifier kj = ValueNotifier(0);
+
 class _StatisticsState extends State<Statistics> {
-  List day = ['Ngày', 'Tuần', 'Tháng', 'Năm'];
+  List day = ['Day', 'Week', 'Month', 'Year'];
+  List f = [today(), week(), month(), year()];
+  List<Add_data> a = [];
   int index_color = 0;
   @override
   Widget build(BuildContext context) {
@@ -141,10 +145,7 @@ class _StatisticsState extends State<Statistics> {
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   return ListTile(
-                    leading: Image.asset(
-                      'images/${geter_top()[index].image!}',
-                      height: 40,
-                    ),
+                    leading: Image.asset('assets/images/Tran.png', height: 40),
                     title: Text(
                       geter_top()[index].name!,
                       style: TextStyle(

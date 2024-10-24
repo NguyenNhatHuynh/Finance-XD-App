@@ -2,6 +2,6 @@ class money {
   String? image;
   String? name;
   String? time;
-  String? free;
+  String? fee;
   bool? buy;
 }
