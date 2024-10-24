@@ -1,4 +1,4 @@
-import 'package:name_your_price/data/1.dart';
+import 'package:finance_appXD/data/1.dart';
 
 List<money> geter() {
   money upwork = money();
