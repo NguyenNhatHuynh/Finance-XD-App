@@ -51,7 +51,6 @@ To run this project locally, please follow these steps:
 Ensure you have the following installed on your machine:
 - Flutter SDK: [Install Flutter](https://flutter.dev/docs/get-started/install)
 - Dart SDK: Included with Flutter
-- Xcode (for iOS development)
 - Android Studio (for Android development)
 - Visual Studio Code or any other IDE
 
