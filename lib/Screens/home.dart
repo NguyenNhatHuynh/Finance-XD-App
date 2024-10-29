@@ -16,13 +16,13 @@ class _HomeState extends State<Home> {
   var history;
   final box = Hive.box<Add_data>('data');
   final List<String> day = [
-    'Monday',
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    'friday',
-    'saturday',
-    'sunday'
+    'Thứ Hai',
+    'Thứ Ba',
+    'Thứ Tư',
+    'Thứ Năm',
+    'Thứ Sáu',
+    'Thứ Bảy',
+    'Chủ Nhật',
   ];
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Transactions History',
+                              'Lịch Sử Giao Dịch',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 19,
@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                             Text(
-                              'See all',
+                              'Xem tất cả',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 15,
@@ -110,7 +110,7 @@ class _HomeState extends State<Home> {
         style: TextStyle(
           fontWeight: FontWeight.w600,
           fontSize: 19,
-          color: history.IN == 'Income' ? Colors.green : Colors.red,
+          color: history.IN == 'Thu nhập' ? Colors.green : Colors.red,
         ),
       ),
     );
@@ -156,7 +156,7 @@ class _HomeState extends State<Home> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Good afternoon',
+                          'Chào buổi chiều',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 16,
@@ -164,7 +164,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          'Enjelin Morgeana',
+                          'Nhật Huỳnh',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
@@ -206,7 +206,7 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Total Balance',
+                        'Tổng số dư',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
@@ -255,7 +255,7 @@ class _HomeState extends State<Home> {
                           ),
                           SizedBox(width: 7),
                           Text(
-                            'Income',
+                            'Thu nhập',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 16,
@@ -277,7 +277,7 @@ class _HomeState extends State<Home> {
                           ),
                           SizedBox(width: 7),
                           Text(
-                            'Expenses',
+                            'Chi phí',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 16,
