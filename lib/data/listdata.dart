@@ -17,8 +17,8 @@ List<money> geter() {
   transportation.buy = true;
   transportation.fee = '100';
   transportation.image = 'Transportation.png';
-  transportation.name = 'Cơm tắm';
-  transportation.time = 'jan 30,2022';
+  transportation.name = 'Bắt Grap';
+  transportation.time = 'Octo 30,2024';
   money food = money();
   food.buy = true;
   food.fee = '100';

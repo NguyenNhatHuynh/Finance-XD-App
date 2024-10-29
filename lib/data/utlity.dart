@@ -9,7 +9,7 @@ int total() {
   var history2 = box.values.toList();
   List a = [0, 0];
   for (var i = 0; i < history2.length; i++) {
-    a.add(history2[i].IN == 'Income'
+    a.add(history2[i].IN == 'Thu nhập'
         ? int.parse(history2[i].amount)
         : int.parse(history2[i].amount) * -1);
   }
@@ -21,7 +21,7 @@ int income() {
   var history2 = box.values.toList();
   List a = [0, 0];
   for (var i = 0; i < history2.length; i++) {
-    a.add(history2[i].IN == 'Income' ? int.parse(history2[i].amount) : 0);
+    a.add(history2[i].IN == 'Thu nhập' ? int.parse(history2[i].amount) : 0);
   }
   totals = a.reduce((value, element) => value + element);
   return totals;
@@ -31,7 +31,8 @@ int expenses() {
   var history2 = box.values.toList();
   List a = [0, 0];
   for (var i = 0; i < history2.length; i++) {
-    a.add(history2[i].IN == 'Income' ? 0 : int.parse(history2[i].amount) * -1);
+    a.add(
+        history2[i].IN == 'Thu nhập' ? 0 : int.parse(history2[i].amount) * -1);
   }
   totals = a.reduce((value, element) => value + element);
   return totals;
@@ -90,7 +91,7 @@ int total_chart(List<Add_data> history2) {
   List a = [0, 0];
 
   for (var i = 0; i < history2.length; i++) {
-    a.add(history2[i].IN == 'Income'
+    a.add(history2[i].IN == 'Thu nhập'
         ? int.parse(history2[i].amount)
         : int.parse(history2[i].amount) * -1);
   }
