@@ -1,23 +1,29 @@
 import 'package:finance_appXD/data/1.dart';
 
 List<money> geter() {
-  money upwork = money();
-  upwork.name = 'upwork';
-  upwork.fee = '650';
-  upwork.time = 'today';
-  upwork.image = 'up.png';
-  upwork.buy = false;
-  money starbucks = money();
-  starbucks.buy = true;
-  starbucks.fee = '15';
-  starbucks.image = 'Star.jpg';
-  starbucks.name = 'starbucks';
-  starbucks.time = 'today';
+  money education = money();
+  education.name = 'Giáo dục';
+  education.fee = '650';
+  education.time = 'Hôm nay';
+  education.image = 'Education.png';
+  education.buy = false;
   money trasfer = money();
   trasfer.buy = true;
-  trasfer.fee = '100';
-  trasfer.image = 'cre.png';
-  trasfer.name = 'trasfer for sam';
+  trasfer.fee = '15';
+  trasfer.image = 'Transfer.png';
+  trasfer.name = 'Chuyển khoản';
   trasfer.time = 'jan 30,2022';
-  return [upwork, starbucks, trasfer, upwork, starbucks, trasfer];
+  money transportation = money();
+  transportation.buy = true;
+  transportation.fee = '100';
+  transportation.image = 'Transportation.png';
+  transportation.name = 'Cơm tắm';
+  transportation.time = 'jan 30,2022';
+  money food = money();
+  food.buy = true;
+  food.fee = '100';
+  food.image = 'food.png';
+  food.name = 'Cơm tắm';
+  food.time = 'Hôm nay';
+  return [education, trasfer, transportation, food];
 }
