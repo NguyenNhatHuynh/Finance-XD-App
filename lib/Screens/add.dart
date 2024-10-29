@@ -18,15 +18,10 @@ class _Add_ScreenState extends State<Add_Screen> {
   FocusNode ex = FocusNode();
   final TextEditingController amount_c = TextEditingController();
   FocusNode amount_ = FocusNode();
-  final List<String> _item = [
-    'food',
-    "Transfer",
-    "Transportation",
-    "Education"
-  ];
+  final List<String> _item = ['Đồ ăn', "Chuyển khoản", "Di chuyển", "Giáo dục"];
   final List<String> _itemei = [
-    'Income',
-    "Expand",
+    'Thu nhập',
+    "Chi phí",
   ];
   @override
   void initState() {
@@ -103,7 +98,7 @@ class _Add_ScreenState extends State<Add_Screen> {
         width: 120,
         height: 50,
         child: Text(
-          'Save',
+          'Lưu',
           style: TextStyle(
             fontFamily: 'f',
             fontWeight: FontWeight.w600,
@@ -135,7 +130,7 @@ class _Add_ScreenState extends State<Add_Screen> {
           });
         },
         child: Text(
-          'Date : ${date.year} / ${date.day} / ${date.month}',
+          'Ngày : ${date.year} / ${date.day} / ${date.month}',
           style: TextStyle(
             fontSize: 15,
             color: Colors.black,
@@ -189,7 +184,7 @@ class _Add_ScreenState extends State<Add_Screen> {
           hint: Padding(
             padding: const EdgeInsets.only(top: 12),
             child: Text(
-              'How',
+              'Loại',
               style: TextStyle(color: Colors.grey),
             ),
           ),
@@ -210,7 +205,7 @@ class _Add_ScreenState extends State<Add_Screen> {
         controller: amount_c,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-          labelText: 'amount',
+          labelText: 'Số tiền',
           labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
@@ -231,7 +226,7 @@ class _Add_ScreenState extends State<Add_Screen> {
         controller: expalin_C,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-          labelText: 'explain',
+          labelText: 'Mô tả',
           labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
@@ -300,7 +295,7 @@ class _Add_ScreenState extends State<Add_Screen> {
           hint: Padding(
             padding: const EdgeInsets.only(top: 12),
             child: Text(
-              'Name',
+              'Danh mục',
               style: TextStyle(color: Colors.grey),
             ),
           ),
@@ -341,7 +336,7 @@ class _Add_ScreenState extends State<Add_Screen> {
                       child: Icon(Icons.arrow_back, color: Colors.white),
                     ),
                     Text(
-                      'Adding',
+                      'Thêm mới',
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
