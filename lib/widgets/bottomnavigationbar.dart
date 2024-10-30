@@ -12,7 +12,7 @@ class Bottom extends StatefulWidget {
 
 class _BottomState extends State<Bottom> {
   int index_color = 0;
-  List Screen = [Home(), Statistics(), Home(), Statistics()];
+  List Screen = [Home(), Statistics(), Add_Screen(), Statistics()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

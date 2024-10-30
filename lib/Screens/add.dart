@@ -266,7 +266,7 @@ class _Add_ScreenState extends State<Add_Screen> {
                       child: Row(
                         children: [
                           Container(
-                            width: 40,
+                            width: 30,
                             child: Image.asset('images/${e}.png'),
                           ),
                           SizedBox(width: 10),
