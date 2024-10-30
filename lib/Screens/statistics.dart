@@ -16,7 +16,7 @@ class Statistics extends StatefulWidget {
 ValueNotifier kj = ValueNotifier(0);
 
 class _StatisticsState extends State<Statistics> {
-  List day = ['Day', 'Week', 'Month', 'Year'];
+  List day = ['Ngày', 'Tuần', 'Tháng', 'Năm'];
   List f = [today(), week(), month(), year()];
   List<Add_data> a = [];
   int index_color = 0;
@@ -44,7 +44,7 @@ class _StatisticsState extends State<Statistics> {
             children: [
               SizedBox(height: 20),
               Text(
-                'Statistics',
+                'Thống kê',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
@@ -105,7 +105,7 @@ class _StatisticsState extends State<Statistics> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Top Spending',
+                      'Mục Chi Tiêu Nổi Bật',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 16,
@@ -151,7 +151,7 @@ class _StatisticsState extends State<Statistics> {
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 19,
-                  color: a[index].IN == 'Income' ? Colors.green : Colors.red,
+                  color: a[index].IN == 'Thu Nhập' ? Colors.green : Colors.red,
                 ),
               ),
             );
