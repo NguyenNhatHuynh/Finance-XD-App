@@ -16,7 +16,7 @@ class Statistics extends StatefulWidget {
 ValueNotifier kj = ValueNotifier(0);
 
 class _StatisticsState extends State<Statistics> {
-  List day = ['today', 'week', 'Tháng', 'Năm'];
+  List day = ['Hôm nay', 'Tuần', 'Tháng', 'Năm'];
   List f = [today(), week(), month(), year()];
   List<Add_data> a = [];
   int index_color = 0;
@@ -73,7 +73,7 @@ class _StatisticsState extends State<Statistics> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: index_color == index
-                                  ? Color.fromARGB(255, 47, 125, 121)
+                                  ? Color.fromARGB(255, 55, 71, 79)
                                   : Colors.white,
                             ),
                             alignment: Alignment.center,
