@@ -125,7 +125,7 @@ class _HomeState extends State<Home> {
               width: double.infinity,
               height: 240,
               decoration: BoxDecoration(
-                color: Color(0xff368983),
+                color: Color(0xff37474F),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -194,7 +194,7 @@ class _HomeState extends State<Home> {
                   spreadRadius: 6,
                 ),
               ],
-              color: Color.fromARGB(255, 47, 125, 121),
+              color: Color.fromARGB(255, 55, 71, 79),
               borderRadius: BorderRadius.circular(15),
             ),
             child: Column(
@@ -210,7 +210,7 @@ class _HomeState extends State<Home> {
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
-                          color: Colors.white,
+                          color: Colors.grey,
                         ),
                       ),
                       Icon(
@@ -226,7 +226,8 @@ class _HomeState extends State<Home> {
                   child: Row(
                     children: [
                       Text(
-                        '\$ ${total()}',
+                        // '\$ ${total()}',
+                        '${total()} VND',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,

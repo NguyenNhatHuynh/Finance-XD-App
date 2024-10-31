@@ -16,7 +16,7 @@ class Statistics extends StatefulWidget {
 ValueNotifier kj = ValueNotifier(0);
 
 class _StatisticsState extends State<Statistics> {
-  List day = ['Ngày', 'Tuần', 'Tháng', 'Năm'];
+  List day = ['today', 'week', 'Tháng', 'Năm'];
   List f = [today(), week(), month(), year()];
   List<Add_data> a = [];
   int index_color = 0;
