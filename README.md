@@ -14,16 +14,7 @@ Finance App is a powerful, cross-platform mobile application built with Flutter 
   
 - **Income Management**: Monitor all your income streams, from salary to side gigs, with real-time summaries.
 
-- **Custom Budgeting**: Set monthly or custom budgets, track your spending, and receive alerts when you're nearing your limit.
-
 - **Interactive Financial Reports**: Gain actionable insights into your spending habits through beautifully designed graphs and charts (pie charts, bar charts, trend analysis).
-
-- **Data Security**: Your data is securely stored and encrypted, ensuring your financial information remains private.
-
-- **Dark and Light Mode**: Enjoy a customizable user experience with support for both light and dark themes.
-
-- **Multi-Language Support**: Support for multiple languages to ensure accessibility for global users.
-
 ---
 
 ## Technology Stack
@@ -37,9 +28,7 @@ The application is built on a robust technology stack that ensures high performa
 - **State Management**: [Riverpod](https://riverpod.dev/) - A flexible and testable state management solution that provides improved performance and code simplicity.
 
 - **Local Database**: [SQLite](https://pub.dev/packages/sqflite) - Lightweight relational database for efficient local data storage.
-
-- **API Integration**: Support for integrating with third-party financial APIs for real-time currency conversion and financial data analysis.
-
+  
 ---
 
 ## Installation Guide
@@ -71,18 +60,6 @@ Ensure you have the following installed on your machine:
 4. **Run the application**
     ```bash
     flutter run
-
----
-
-## Application Architecture
-
-The app follows a clean and maintainable architecture, utilizing the principles of SOLID, separation of concerns, and reactive programming.
-
-- **State Management**: Riverpod is used to handle the state across the app. It ensures reusability, testability, and scalability.
-- **Dependency Injection**: Leveraged to decouple the business logic from UI components.
-- **Data Layer**: A repository pattern is used to abstract the data sources (local database, remote APIs), making it easy to switch between them or mock them for testing.
-- **UI Layer**: The UI is structured into reusable widgets, designed to adapt seamlessly across different screen sizes and platforms.
-
 ---
 
 ## Screenshots
