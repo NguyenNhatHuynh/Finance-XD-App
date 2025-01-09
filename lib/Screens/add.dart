@@ -11,7 +11,7 @@ class Add_Screen extends StatefulWidget {
 
 class _Add_ScreenState extends State<Add_Screen> {
   final box = Hive.box<Add_data>('data');
-  DateTime date = new DateTime.now();
+  DateTime date = DateTime.now();
   String? selctedItem;
   String? selctedItemi;
   final TextEditingController expalin_C = TextEditingController();
@@ -28,9 +28,9 @@ class _Add_ScreenState extends State<Add_Screen> {
     'Thu nhập',
     "Chi phí",
   ];
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     ex.addListener(() {
       setState(() {});
@@ -98,7 +98,7 @@ class _Add_ScreenState extends State<Add_Screen> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Color(0xff37474F),
+          color: Color.fromARGB(255, 84, 33, 100),
         ),
         width: 120,
         height: 50,
@@ -217,7 +217,8 @@ class _Add_ScreenState extends State<Add_Screen> {
               borderSide: BorderSide(width: 2, color: Color(0xffC5C5C5))),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color(0xff368983))),
+              borderSide: BorderSide(
+                  width: 2, color: Color.fromARGB(255, 84, 33, 100))),
         ),
       ),
     );
@@ -238,7 +239,8 @@ class _Add_ScreenState extends State<Add_Screen> {
               borderSide: BorderSide(width: 2, color: Color(0xffC5C5C5))),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color(0xff368983))),
+              borderSide: BorderSide(
+                  width: 2, color: Color.fromARGB(255, 84, 33, 100))),
         ),
       ),
     );
@@ -319,7 +321,7 @@ class _Add_ScreenState extends State<Add_Screen> {
           width: double.infinity,
           height: 240,
           decoration: BoxDecoration(
-            color: Color(0xff37474F),
+            color: Color.fromARGB(255, 84, 33, 100),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
@@ -338,22 +340,27 @@ class _Add_ScreenState extends State<Add_Screen> {
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: Icon(Icons.arrow_back, color: Colors.white),
+                      child: Container(
+                        width: 30,
+                        child: Icon(
+                          Icons.arrow_back_ios_rounded,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                     Text(
-                      'Thêm mới',
+                      "Thêm giao dịch",
                       style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white),
+                        fontFamily: 'f',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                        color: Colors.white,
+                      ),
                     ),
-                    Icon(
-                      Icons.attach_file_outlined,
-                      color: Colors.white,
-                    )
+                    Container(width: 30),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

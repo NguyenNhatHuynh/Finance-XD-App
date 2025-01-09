@@ -125,7 +125,7 @@ class _HomeState extends State<Home> {
               width: double.infinity,
               height: 240,
               decoration: BoxDecoration(
-                color: Color(0xff37474F),
+                color: Color.fromARGB(255, 75, 40, 124),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
                       child: Container(
                         height: 40,
                         width: 40,
-                        color: Color.fromRGBO(250, 250, 250, 0.1),
+                        color: Color.fromRGBO(59, 17, 87, 0.09),
                         child: Icon(
                           Icons.notification_add_outlined,
                           size: 30,
@@ -188,13 +188,13 @@ class _HomeState extends State<Home> {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Color.fromRGBO(47, 125, 121, 0.3),
+                  color: Color.fromRGBO(120, 157, 236, 0.298),
                   offset: Offset(0, 6),
                   blurRadius: 12,
                   spreadRadius: 6,
                 ),
               ],
-              color: Color.fromARGB(255, 55, 71, 79),
+              color: Color.fromARGB(255, 75, 40, 124),
               borderRadius: BorderRadius.circular(15),
             ),
             child: Column(
@@ -247,9 +247,9 @@ class _HomeState extends State<Home> {
                         children: [
                           CircleAvatar(
                             radius: 13,
-                            backgroundColor: Color.fromARGB(255, 85, 145, 141),
+                            backgroundColor: Colors.green,
                             child: Icon(
-                              Icons.arrow_downward,
+                              Icons.arrow_upward,
                               color: Colors.white,
                               size: 19,
                             ),
@@ -269,9 +269,9 @@ class _HomeState extends State<Home> {
                         children: [
                           CircleAvatar(
                             radius: 13,
-                            backgroundColor: Color.fromARGB(255, 85, 145, 141),
+                            backgroundColor: Colors.deepOrange,
                             child: Icon(
-                              Icons.arrow_upward,
+                              Icons.arrow_downward,
                               color: Colors.white,
                               size: 19,
                             ),

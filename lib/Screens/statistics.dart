@@ -73,7 +73,7 @@ class _StatisticsState extends State<Statistics> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: index_color == index
-                                  ? Color.fromARGB(255, 55, 71, 79)
+                                  ? Color.fromARGB(255, 73, 21, 105)
                                   : Colors.white,
                             ),
                             alignment: Alignment.center,

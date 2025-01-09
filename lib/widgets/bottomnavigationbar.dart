@@ -26,7 +26,7 @@ class _BottomState extends State<Bottom> {
           Icons.add,
           color: Colors.white,
         ),
-        backgroundColor: Color(0xff557179),
+        backgroundColor: Color.fromARGB(255, 84, 33, 100),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
@@ -45,7 +45,9 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.home,
                   size: 30,
-                  color: index_color == 0 ? Color(0xff557179) : Colors.grey,
+                  color: index_color == 0
+                      ? Color.fromARGB(255, 84, 33, 100)
+                      : Colors.grey,
                 ),
               ),
               GestureDetector(
@@ -57,7 +59,9 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.bar_chart_outlined,
                   size: 30,
-                  color: index_color == 1 ? Color(0xff557179) : Colors.grey,
+                  color: index_color == 1
+                      ? Color.fromARGB(255, 84, 33, 100)
+                      : Colors.grey,
                 ),
               ),
               SizedBox(width: 10),
@@ -70,7 +74,9 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.account_balance_wallet_outlined,
                   size: 30,
-                  color: index_color == 2 ? Color(0xff557179) : Colors.grey,
+                  color: index_color == 2
+                      ? Color.fromARGB(255, 84, 33, 100)
+                      : Colors.grey,
                 ),
               ),
               GestureDetector(
@@ -82,7 +88,9 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.person_outlined,
                   size: 30,
-                  color: index_color == 3 ? Color(0xff557179) : Colors.grey,
+                  color: index_color == 3
+                      ? Color.fromARGB(255, 84, 33, 100)
+                      : Colors.grey,
                 ),
               ),
             ],
