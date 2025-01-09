@@ -14,16 +14,7 @@ Finance App is a powerful, cross-platform mobile application built with Flutter 
   
 - **Income Management**: Monitor all your income streams, from salary to side gigs, with real-time summaries.
 
-- **Custom Budgeting**: Set monthly or custom budgets, track your spending, and receive alerts when you're nearing your limit.
-
 - **Interactive Financial Reports**: Gain actionable insights into your spending habits through beautifully designed graphs and charts (pie charts, bar charts, trend analysis).
-
-- **Data Security**: Your data is securely stored and encrypted, ensuring your financial information remains private.
-
-- **Dark and Light Mode**: Enjoy a customizable user experience with support for both light and dark themes.
-
-- **Multi-Language Support**: Support for multiple languages to ensure accessibility for global users.
-
 ---
 
 ## Technology Stack
@@ -37,9 +28,7 @@ The application is built on a robust technology stack that ensures high performa
 - **State Management**: [Riverpod](https://riverpod.dev/) - A flexible and testable state management solution that provides improved performance and code simplicity.
 
 - **Local Database**: [SQLite](https://pub.dev/packages/sqflite) - Lightweight relational database for efficient local data storage.
-
-- **API Integration**: Support for integrating with third-party financial APIs for real-time currency conversion and financial data analysis.
-
+  
 ---
 
 ## Installation Guide
@@ -71,31 +60,17 @@ Ensure you have the following installed on your machine:
 4. **Run the application**
     ```bash
     flutter run
-
----
-
-## Application Architecture
-
-The app follows a clean and maintainable architecture, utilizing the principles of SOLID, separation of concerns, and reactive programming.
-
-- **State Management**: Riverpod is used to handle the state across the app. It ensures reusability, testability, and scalability.
-- **Dependency Injection**: Leveraged to decouple the business logic from UI components.
-- **Data Layer**: A repository pattern is used to abstract the data sources (local database, remote APIs), making it easy to switch between them or mock them for testing.
-- **UI Layer**: The UI is structured into reusable widgets, designed to adapt seamlessly across different screen sizes and platforms.
-
 ---
 
 ## Screenshots
-<!--Here are a few screenshots showcasing the app’s core features and user interface:
-
-Dashboard showing expense summary and budget progress.
-
-Expense tracking screen with categorization.
-
-Financial reports with detailed insights and charts. -->
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <img src="https://imgur.com/GAs1eMF.png" alt="Image 1" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://imgur.com/RSfEyWZ.png" alt="Image 2" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://imgur.com/7qqb0Ij.png" alt="Image 3" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://imgur.com/oI4HpUu.png" alt="Image 4" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+</div>
 
 --- 
-
 ## Contributing
 
 We welcome contributions from the community! If you're interested in improving this app, please follow these guidelines:
@@ -107,8 +82,6 @@ We welcome contributions from the community! If you're interested in improving t
 6. **Open a pull request and describe the changes you've made**:
 
 --- 
-
-## License
-
-This project is licensed under the MIT License. You are free to use, modify, and distribute this software, provided that you include the original license.
-
+# Author👨‍💻 
+### I would appreciate if you could give this repository a star 🌟. It would help others to discover this. Thank you for your support [Xoan Dev]👨‍💻
+- [x] status Project: Final
