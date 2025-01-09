@@ -63,11 +63,12 @@ Ensure you have the following installed on your machine:
 ---
 
 ## Screenshots
+ <img src="https://imgur.com/Y5cfmK8.png" alt="Image 1" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-    <img src="https://imgur.com/GAs1eMF.png" alt="Image 1" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    <img src="https://imgur.com/RSfEyWZ.png" alt="Image 2" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    <img src="https://imgur.com/7qqb0Ij.png" alt="Image 3" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    <img src="https://imgur.com/oI4HpUu.png" alt="Image 4" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://imgur.com/bO4wUkz.png" alt="Image 1" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://imgur.com/jbSEJNg.png" alt="Image 2" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://imgur.com/MuPNLBJ.png" alt="Image 3" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="https://imgur.com/tuti2nx.png" alt="Image 4" style="width: 45%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
 </div>
 
 --- 
